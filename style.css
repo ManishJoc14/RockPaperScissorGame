@@ -1,0 +1,111 @@
+.container {
+    height: 90vh;
+    width: 90vw;
+    background-color: rgb(98, 255, 83);
+    margin-left: 5vw;
+    margin-top: 5vh;
+    display: block;
+}
+.start {
+    position: absolute;
+    text-align: center;
+    left: 40%;
+    top: 20%;
+    transition: display 2s ease-out 1s;
+    /* intially block and will be made 'none' after prssing play button */
+    display: block; 
+    
+}
+
+.game {
+    transition: display 2s ease-in 1s;
+    /* intially 'none' and later will be 'block'prssing play button */
+    display: none;
+}
+
+#result {
+    text-align: center;
+    font-size: 40px;
+    visibility: hidden;
+    transition: visibility 2s;
+}
+
+#choose {
+    font-size: 35px;
+    color: rgb(31, 107, 8);
+    position: absolute;
+    visibility: visible;
+    top: 220px;
+    left: 70px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(7, 6, 6);
+}
+
+.gameboard {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10%;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+    height: 50px;
+    width: 110px;
+    background-color: rgb(40, 3, 204);
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgb(159, 238, 94), 0 15px 20px rgb(47, 187, 82);
+}
+
+button:hover {
+    background-color: rgb(24, 24, 121);
+}
+
+/* Shaking Animations to images whenever any button is pressed  */
+@keyframes shake {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-40px);
+    }
+    30% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(40px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-40px);
+    }
+    70% {
+        transform: translateY(0px);
+    }
+    80% {
+        transform: translateY(40px);
+    }
+    90% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

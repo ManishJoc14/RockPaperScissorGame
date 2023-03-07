@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- A parent container which contains two divisions 
+        1. start ..... Div to show at the starting whose 'display' will be made 'none' after prssing play button
+        2. game  ..... Div whose display is intially 'none' and later will be 'block' and conatins further two divs and two paragraphs
+                a.div scoreboard .... which contains scores of player in further two divs 
+                    i. player ii. computer
+                b.div gameboard ..... which conatins three divs 
+                    i. choices ==> to make buttons 
+                    ii. player image ( pimage ) ===> which will show respective image choosen by Player
+                    iii. computer image ( cimage ) ===> which will show respective image choosen by Computer
+                c. p (#result)..... which will show the messages win, lose, or draw.
+                d. p (#choose)..... text which will say user to choose any option 
+            -->
+    <div class="container">
+        <!-- 1. start -->
+        <div class="start">
+            <h1>Lets Play Game</h1>
+            <button class="play">Play</button>
+        </div>
+
+        <!-- 2. game  -->
+        <div class="game">
+            <!-- a. scoreboard -->
+            <div class="scoreboard">
+                <!-- i. player -->
+                <div class="player">
+                    Player<br><span id="playerscore"> 0</span>
+                </div>
+                <!-- ii. computer -->
+                <div class="computer">
+                    Computer<br><span id="computerscore"> 0</span>
+                </div>
+            </div>
+
+            <!-- c.p (#result)  -->
+            <p id="result"> Results here </p>
+            <!-- d. p (#choose) -->
+            <p id="choose">Choose</p>
+
+             <!-- b. gameboard -->
+            <div class="gameboard">
+                <!-- i. choice -->
+                <div class="choices">
+                    <button id="rock">Rock</button>
+                    <button id="paper">Paper</button>
+                    <button id="scissor">Scissor</button>
+                </div>
+                <!-- ii. Player Image -->
+                <div class="pimage"><img id="playerimg" src="prock.png"></div>
+                <!-- iii. Computer Image -->
+                <div class="cimage"><img id="computerimg" src="crock.png"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
